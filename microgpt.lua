@@ -58,11 +58,11 @@ end
 
 -- 2. Initialize the parameters, to store the knowledge of the model
 local n_layer=1;    -- depth of the transformer neural network (number of layers)
-local n_embd=16;    -- width of the network (embedding dimension) 
+local n_embd=16;    -- width of the network (embedding dimension)
 local block_size=16 -- maximum context length of the attention window (note: the longest name is 15 characters)
 local n_head=4;     -- number of attention heads
 local head_dim = math.floor(n_embd / n_head) -- derived dimension of each head
-local state_dict,params  = {},{}
+local state_dict,params = {},{}
 
 local function init_parameters(vocab_size, rng)
   local function matrix(nout, nin, std)
@@ -95,7 +95,7 @@ end
 
 -- 3. Define the model architecture: a function mapping tokens and parameters to logits over what comes next
 -- Follow GPT-2, blessed among the GPTs, with minor differences: layernorm -> rmsnorm, no biases, GeLU -> ReLU
-local Z = val(0)
+local Z = val(0) -- reusable zero node to seed accumulations
 
 local function linear(x, w)
   local o = {}
