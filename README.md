@@ -23,8 +23,8 @@ Takes a few minutes on a modern laptop.
 
 ## Why Lua
 
-- **Small:** Lua binary (~184K) + script (~10K) + training data (~223K) = ~417KB total — including the interpreter
-- **Simple:** Lua has only one composite data structure — the table — which serves as array, map, and object alike
+- **Small:** Lua binary (~184K) + script (~10K) + training data (~223K) = ~417KB total
+- **Simple:** Lua has only one composite data structure — the table — which serves as array, map, and object
 - **Sufficient:** tables are enough to implement autograd — both forward and backward passes for a full GPT (see [Autograd] in the [microgpt blog])
 
 ## Correctness & Alignment
