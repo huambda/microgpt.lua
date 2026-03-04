@@ -1,6 +1,9 @@
 # microgpt.lua
 
-A Lua port of Andrej Karpathy's [microgpt] — a minimal, from-scratch GPT.
+microgpt.lua (300 lines) — a Lua port of Andrej Karpathy's [microgpt]. Runs standalone, or with alignment scripts to verify exact numerical match: same loss, same samples. Lua interpreter + microgpt.lua + alignment scripts + training data — everything needed, combined under 0.5MB.
+
+![pyalign result](pyalign.jpg)
+
 
 ## Quick Start
 ```bash
